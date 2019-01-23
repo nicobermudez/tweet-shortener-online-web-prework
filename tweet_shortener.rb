@@ -14,7 +14,7 @@ def dictionary
 end
 
 def word_substituter(string)
-  array = string.split(",")
+  array = string.split
   array.collect do |word|
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
@@ -22,7 +22,7 @@ def word_substituter(string)
       word
     end
   end
-  array.join(",")
+  array.join(" ")
 end
 
 def bulk_tweet_shortener(array)
