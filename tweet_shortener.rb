@@ -14,8 +14,9 @@ def dictionary
 end
 
 def word_substituter(string)
-  array = string.split.collect do |tweet|
-    if dictionary.include? 
+  array = string.split.collect do |word|
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word.downcase]
     end
   end
   array.join(",")
