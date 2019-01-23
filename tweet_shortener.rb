@@ -15,12 +15,8 @@ end
 
 def word_substituter(string)
   array = string.split(",")
-  dictionary.each do |word, value|
-    array.each do |tweet|
-      if tweet == word 
-        tweet = value 
-      end
-    end
+  array.each do |word|
+    dictionary.any? {|word, key| == word 
   end
   array.join(",")
 end
