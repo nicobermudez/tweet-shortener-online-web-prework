@@ -16,7 +16,7 @@ end
 def word_substituter(string)
   array = string.split(",")
   array.collect do |word|
-    dictionary.include?(word)
+    dictionary.include?(word) ? word = dictionary[word] : word
     end
   end
   array.join(",")
