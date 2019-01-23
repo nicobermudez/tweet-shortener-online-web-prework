@@ -16,7 +16,11 @@ end
 def word_substituter(string)
   array = string.split(",")
   array.collect do |tweet|
-    dictionary.each {|key, value| tweet == key ? value : tweet}
+    dictionary.each do |key, value| 
+      if tweet == key 
+        tweet = value 
+      end
+    end
   end
   array.join(",")
 end
