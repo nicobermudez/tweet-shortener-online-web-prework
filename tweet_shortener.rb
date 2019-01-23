@@ -22,6 +22,5 @@ def word_substituter(string)
       end
     end
   end
-  array.to_s 
-    
+  array.join(",")
 end
