@@ -13,16 +13,15 @@ def dictionary
     "and" => "&"}
 end
 
-def word_substituter(string)
-  array = string.split
-  array.collect do |word|
+def word_substituter(tweet)
+  tweetArray = tweet.split.collect do |word|
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
     else
       word
     end
   end
-  array.join(" ")
+  tweetArray.join(" ")
 end
 
 def bulk_tweet_shortener(array)
