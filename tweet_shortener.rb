@@ -14,14 +14,15 @@ def dictionary
 end
 
 def word_substituter(string)
-  array = string.split.collect do |word|
-    if dictionary.keys.include?(word.downcase)
-      word = dictionary[word.downcase]
-    else
-      word
+  array = string.split(",")
+  array.collect do |tweet|
+    dictionary.each do |key, value| 
+      if tweet == key.downcase 
+        tweet = value 
+      end
     end
   end
-  array.join(" ")
+  array.join(",")
 end
 
 def bulk_tweet_shortener(array)
