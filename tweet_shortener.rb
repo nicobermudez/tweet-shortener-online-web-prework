@@ -14,5 +14,7 @@ def dictionary
 end
 
 def word_substituter(string)
-  
+  string
+  dictionary.each do |word|
+    
 end
