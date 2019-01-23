@@ -14,7 +14,14 @@ def dictionary
 end
 
 def word_substituter(string)
-  string
-  dictionary.each do |word|
+  array = string.split(",")
+  dictionary.each do |word, value|
+    array.each do |tweet|
+      if tweet == word 
+        tweet = value 
+      end
+    end
+  end
+  array.to_s 
     
 end
